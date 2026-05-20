@@ -15,6 +15,7 @@ npx skills@latest add bymatej/skills
 Install one skill with:
 
 ```sh
+npx skills@latest add bymatej/skills --skill auto-grill
 npx skills@latest add bymatej/skills --skill focused-skill-authoring
 ```
 
@@ -47,7 +48,10 @@ npx skills@latest add https://github.com/bymatej/skills
     └── mattpocock-skills/
 ```
 
-Original skills live under `skills/<category>/<skill-name>/`.
+Original skills live under `skills/<category>/<skill-name>/`:
+
+- `productivity/auto-grill` - Automated plan stress-testing: griller agent generates adversarial questions blind to the codebase; researcher agent answers them from actual code; human judgment calls surface as A/B/C prompts
+- `productivity/focused-skill-authoring` - Workflow for creating and updating skills in this repository
 
 Copied upstream skills live under `skills/vendor/mattpocock/`. The upstream repository is also tracked as a Git submodule at `vendor/mattpocock-skills/` for inspection and manual sync.
 
