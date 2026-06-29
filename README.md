@@ -17,6 +17,7 @@ Install one skill with:
 ```sh
 npx skills@latest add bymatej/skills --skill auto-grill
 npx skills@latest add bymatej/skills --skill focused-skill-authoring
+npx skills@latest add bymatej/skills --skill qa
 ```
 
 Install Matt Pocock's `grill-me` skill from this repo with:
@@ -52,6 +53,7 @@ Original skills live under `skills/<category>/<skill-name>/`:
 
 - `productivity/auto-grill` - Automated plan stress-testing: griller agent generates adversarial questions blind to the codebase; researcher agent answers them from actual code; human judgment calls surface as A/B/C prompts
 - `productivity/focused-skill-authoring` - Workflow for creating and updating skills in this repository
+- `productivity/qa` - Q&A mode for short, accurate answers to technical and business questions about the current project; uses codebase, Jira, Confluence, and web tools if available
 
 Copied upstream skills live under `skills/vendor/mattpocock/`. The upstream repository is also tracked as a Git submodule at `vendor/mattpocock-skills/` for inspection and manual sync.
 
