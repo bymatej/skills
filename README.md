@@ -12,6 +12,8 @@ Install from GitHub with:
 npx skills@latest add bymatej/skills
 ```
 
+This installs into the current project by default. Add `--global` to make selected skills available across projects. Install through the CLI rather than copying skill folders manually so the source is recorded for future updates.
+
 Install one skill with:
 
 ```sh
@@ -35,19 +37,36 @@ npx skills@latest add https://github.com/bymatej/skills
 
 ## Update
 
-Update all installed project skills to their latest versions:
+The update command only manages skills previously installed through the `skills` CLI with source metadata. Check what the CLI can update at each scope:
+
+```sh
+npx skills@latest list --json
+npx skills@latest list --global --json
+```
+
+Update all CLI-managed project skills or one project skill:
 
 ```sh
 npx skills@latest update --project --yes
-```
-
-Update one installed project skill by name:
-
-```sh
 npx skills@latest update mental-model --project --yes
 ```
 
-Replace `mental-model` with the name of any other installed skill. Use `--global` instead of `--project` for skills installed globally.
+Update all CLI-managed global skills or one global skill:
+
+```sh
+npx skills@latest update --global --yes
+npx skills@latest update mental-model --global --yes
+```
+
+Replace `mental-model` with any installed skill name. If the CLI reports no skills to update, or `list --json` shows `"source": null`, install or reinstall the skill from this repository at the intended scope first:
+
+```sh
+# Project scope; run from the target project directory.
+npx skills@latest add bymatej/skills --skill mental-model --yes
+
+# Global scope.
+npx skills@latest add bymatej/skills --skill mental-model --global --yes
+```
 
 ## Repository Layout
 
