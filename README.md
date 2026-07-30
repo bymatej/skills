@@ -17,6 +17,7 @@ Install one skill with:
 ```sh
 npx skills@latest add bymatej/skills --skill auto-grill
 npx skills@latest add bymatej/skills --skill focused-skill-authoring
+npx skills@latest add bymatej/skills --skill mental-model
 npx skills@latest add bymatej/skills --skill qa
 ```
 
@@ -31,6 +32,22 @@ The `skills` CLI also accepts the full GitHub URL:
 ```sh
 npx skills@latest add https://github.com/bymatej/skills
 ```
+
+## Update
+
+Update all installed project skills to their latest versions:
+
+```sh
+npx skills@latest update --project --yes
+```
+
+Update one installed project skill by name:
+
+```sh
+npx skills@latest update mental-model --project --yes
+```
+
+Replace `mental-model` with the name of any other installed skill. Use `--global` instead of `--project` for skills installed globally.
 
 ## Repository Layout
 
@@ -53,6 +70,7 @@ Original skills live under `skills/<category>/<skill-name>/`:
 
 - `productivity/auto-grill` - Automated plan stress-testing: griller agent generates adversarial questions blind to the codebase; researcher agent answers them from actual code; human judgment calls surface as A/B/C prompts
 - `productivity/focused-skill-authoring` - Workflow for creating and updating skills in this repository
+- `productivity/mental-model` - Evidence-grounded meeting cards and layered mental models for RFCs, pull requests, code changes, reviews, and repository systems
 - `productivity/qa` - Q&A mode for short, accurate answers to technical and business questions about the current project; uses codebase, Jira, Confluence, and web tools if available
 
 Copied upstream skills live under `skills/vendor/mattpocock/`. The upstream repository is also tracked as a Git submodule at `vendor/mattpocock-skills/` for inspection and manual sync.
